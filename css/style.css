@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  line-height: 1.7;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100vh;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  cursor: -webkit-grab;
+  cursor: grab;
+  overflow: hidden;
+}
+
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  width: 100vw;
+  max-height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 60%;
+}
+
+.slide h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.slide h4 {
+  font-size: 1.3rem;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+}
+
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.grabbing .slide img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
